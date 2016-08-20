@@ -1,0 +1,514 @@
+# Arithmetic
+
+## Basic Operators
+
+Basic operators work as expected
+1 + 2 - 3 = 0
+
+Division can be done as follows
+1/2 = 1 \div 2 = \frac{1}{2}
+
+Multiplication
+2 \cdot 3 = 2 \times 3 
+
+!bad Avoid using `*` for multiplication
+2 * 3
+
+Use `\displaystyle` for separate equations.<br>It makes it breath more
+\displaystyle \frac{1}{2}
+
+## Exponents and Indexes
+
+Exponents can by typeset with a caret
+2^3 = 8
+
+use braces to group exponents ...
+2^{10}
+
+!bad ... to avoid
+2^10
+
+Subscripts, like indices, can by typeset as follows
+a_n = 2 \cdot a_{n-1}
+
+## Square roots
+
+A square root can be typeset with
+\sqrt{16} = 4
+
+To take the [math]n^\text{th}[/math] root, use
+\sqrt[3]{27} = 3
+
+`\pm` becomes a plus-minus.
+x^2 = 4 \implies x = \pm \sqrt{4}
+
+Braces can be omitted if the argument is only 1 symbol
+\sqrt 2
+
+## Delimiters
+
+For large parentheses, use `\left` and `\right` ...
+\left( \frac{e^{x^2}}{2} \right)
+
+!bad ... to avoid the following
+(\frac{e^{x^2}}{2})
+
+This can also be used with `|`, `[`, ...
+\left| \frac{x + 1}{x - 1} \right|
+
+Floor can be obtained with `\lfloor` and `\rfloor`
+\left\lfloor \frac{1}{2} \right\rfloor
+
+`\|` becomes a double bar
+\left\| \frac{z}{a} \right\|
+
+# Text and spacing
+
+## text
+
+Use `\text` ...
+\text{Area 1}
+
+!bad ... to avoid the following
+Area 1
+
+This can be useful for ordinals
+5^\text{th}
+
+## Sizes
+
+From small ...
+\tiny 2
+\scriptsize 2
+\small 2
+\normalsize 2
+\large 2
+
+... to big
+\Large 2
+\LARGE 2
+\huge 2
+\Huge 2
+
+## Spacing
+
+`\&nbsp;` adds a space with the width of a space
+\blacksquare \ 
+\blacksquare
+
+`\quad` and `\qquad` are bigger spaces
+\blacksquare \quad
+\blacksquare \qquad
+\blacksquare
+
+`\:` and `\,` are small spaces
+\blacksquare \:
+\blacksquare \,
+\blacksquare
+
+# Adding some color
+
+Make it green ...
+\huge
+\color{green}{\ddot \smile}
+
+or red
+\huge
+\color{red}{\ddot\frown}
+
+HTML colors are valid too
+\huge
+\color{#0f0}{\checkmark}
+
+# Equalities
+
+(In)equalities
+1 + 1 = 2 \ne 3 \approx \pi
+
+`\lt` stands for less than
+3 \lt x \le 4
+
+`\gt` stands for greater than
+x \gt 3
+
+`\ge` stands for greater than or equal to
+x \ge 3
+
+`\not` can be prepended to anything, but is often ugly
+x \not\gt 4
+
+[math]T[/math] is proportional to [math]p[/math]
+T \propto p \text{ or } T \sim p
+
+## Alignment of equal signs
+
+Align equal signs as follows
+\begin{align}
+    2 + 2 &= 4 \\
+    2     &= 4 - 2
+\end{align}
+
+You can also give a tag to a line
+\begin{align}
+    2 + 2 &= 4     \tag 1 \\
+    2     &= 4 - 2        \\
+    2     &= 2     \tag a 
+\end{align}
+
+To give some more explanation, add some text
+\begin{align}
+    2 + 2 &= 4                             \tag 1 \\
+    2     &= 4 - 2 && \text{subtracting 2}        \\
+    2     &= 2                             \tag a 
+\end{align}
+
+System of equations
+S = \left\{
+\begin{align}
+    a + b     &= 4\\
+    a \cdot b &= 4
+    \end{align}
+\right.
+
+## Annotating equalities
+
+Overset can be used to stack symbols
+2 \overset{?}{=} 3
+
+!bad Arrows are sometimes too short
+\overset{\text{some text}}{\rightarrow}
+
+Use `\xrightarrow` instead
+\xrightarrow{\text{some text}}
+
+Underbrace and overbrace in action
+(\cos x + \sin x)^2 =
+    \underbrace{\cos^2 x + \sin^2 x}_{1} +
+    \overbrace{2 \sin x \cos x}^{\sin 2x}
+
+## Modulo
+
+If [math]\text{mod}[/math] is used as a binary operator
+7 \bmod 4 = 3
+
+If it's used after an equation
+7 \equiv 3 \pmod 4
+
+Without parentheses
+7 \equiv 3 \mod 4
+
+# Geometry
+
+## Angles
+
+Use `\angle` to denote an angle
+\angle A = 90^\circ
+
+`\hat` and `\widehat` are another possibility
+\hat A = \widehat{BAC}
+
+For radians, the following works
+\angle A = \frac{\pi}{2} \text{ radians}
+
+## Greek letters
+
+Some Greek letters
+\pi, \sigma, \epsilon, \rho, \delta
+
+Greek uppercase letters 
+\Pi, \Sigma, \text{E}, \text{R}, \Delta
+
+Phi has a few variants
+\phi, \varphi
+
+Same for epsilon
+\epsilon, \varepsilon
+
+## Other symbols
+
+Useful shapes
+\triangle, \square, \bigcirc
+
+Perpendicular
+AB \perp BC
+
+Parallel
+AB \parallel CD
+
+Similarity
+\triangle ABC \sim \triangle CEF
+
+Cong
+\triangle ABC \cong \triangle CEF
+
+# Functions
+
+## Standard functions
+
+Write standard functions with a backslash
+\log x
+
+!bad Not doing so gives bad results
+log x
+
+Lots of functions are available ...
+\exp x, \sin x, \arccos x, \cosh x, \max x
+
+
+## Introducing functions
+
+Some functions aren't aviable. <br> Use `operatorname`
+\operatorname{arccosh} x
+
+Another way of defining a function
+\begin{align}
+    f\colon \mathbb N &\to \mathbb N\\
+    x                 &\mapsto x^2
+\end{align}
+
+Piecewise functions
+f(x) = \begin{cases}
+    x   & \text{if $x \gt 0$}\\
+    x^2 & \text{else}
+\end{cases}
+
+# Sums and Series
+
+## Summation and products
+
+Typesetting sums is easy
+\sum_{n=1}^\infty x^n
+
+`\displaystyle` makes it breath some more
+\displaystyle \sum_{n=1}^\infty x^n
+
+Products can be typeset in a similar fashion
+\displaystyle \prod_{n=1}^\infty x^n
+
+## Let's talk about &hellip;
+
+!bad Never use `...` to make dots
+1 + 2 - 3 + 4 ...
+
+`\cdots` gives centered dots
+f(x) = x + x^2 + x^3 + \cdots
+
+`\ldots` gives low dots
+1, 2, \ldots, 10
+
+Vertical and diagonal dots are useful in matrices
+\vdots \ddots
+
+# Infinity
+
+The inf(ini)ty symbol
+\infty
+
+Cardinal infinity
+|\mathbb N| = \aleph_0
+
+Ordinal infinity
+\omega^\omega = \text{big}
+
+# Logic
+
+Logical or & and
+a \lor b \land c
+
+Logical not
+\bar{c} \equiv \lnot c
+
+True and false
+\top \land \bot \equiv \bot
+
+Implications
+(a \implies b) \iff (b \impliedby a)
+
+Quantors
+\forall A, \exists B : A \lt B 
+
+# Sets
+
+## Braces
+
+!bad `{}` don't work, as they group objects
+{1, 2, 3}
+
+Escape them with a backslash
+\{1, 2, 3\}
+
+Use `\mathbb` to get double stroked letters
+\mathbb{N} = \{0, 1, 2, 3, \ldots \}
+
+`\mid` inserts a vertical bar
+\{n^2 \mid n \in \mathbb{N}\}
+
+## Cup and Cap
+
+Use a cup and a cap to unfiy or intersect
+A \cup B = C \cap D
+
+Element of a set
+x \in A
+
+Superset and subset are self-explanatory
+A \subset B \iff B \supset A
+
+Add `eq` to get
+A \subseteq B
+
+To subtract a set, write
+\mathbb N_0 = \mathbb N \setminus \{0\}
+
+## Others
+
+Empty set
+\emptyset = \varnothing 
+
+Powerset
+\mathcal P \{1, 2\} = \{\{\}, \{1\}, \{2\}, \{1,2\} \}
+
+# Combinatorics
+
+Factorial
+4! = 4 \cdot 3 \cdot 2 \cdot 1
+
+Binomial notation
+{n \choose r} = \binom{n}{r} = \frac{n!}{(n-r)!r!}
+
+Other ways
+{}_nC_r = C_r^n
+
+# Complex numbers
+
+The complex set
+a + ib \in \mathbb C
+
+The real part
+\Re \left( e^{ix} \right) = \cos x
+
+The imaginary part
+\Im \left( e^{ix} \right) = \sin x
+
+The conjugate of number
+\overline z = \Re z - \Im z
+
+The magnitude
+|z| = \| z \|
+
+The argument
+\arg z
+
+
+
+# Calculus
+
+## Limits
+
+Limits can be typeset with a subscript
+\lim_{x \to \infty} x^2 = \infty
+
+Displaystyle makes it breath more
+\displaystyle\lim_{x \to \infty} x^2 = \infty
+
+## Derivatives
+
+Derivatives
+\displaystyle
+\frac{dy}{dx}
+
+Derivative at a point
+\displaystyle
+\left. \frac{dy}{dx} \right|_{x=0}
+
+Partial derivatives
+\displaystyle
+\frac{\partial f(x,y)}{\partial x} = f_x
+
+Difference quotients
+\displaystyle
+\frac{\Delta y}{\Delta x}
+
+Derivates w.r.t. time
+\dot x, \ddot x
+
+## Integrals
+
+Here, `\,` adds a small space
+\int x \, dx = \frac{x^2}{2}
+
+!bad Never use consecutive `\int`s
+\int \int x^2 + y^2 \,dx \,dy
+
+Use `\iint` instead
+\iint x^2 + y^2 \,dx \, dy
+
+Limits can be added too
+\int_a^b x \, dx
+
+Displaystyle makes it breath more
+\displaystyle\int_a^b x \, dx
+
+Evaluating integrals. `\left.` is an invisible bracket.
+\displaystyle
+\int_0^1 x \, dx = \left. \frac{x^2}{2} \right|_0^1
+
+Closed path integral
+\displaystyle
+\oint_C \mathbf F \cdot d \mathbf r
+
+# Vectors
+
+Choose one of the following
+\mathbf{a} = \vec a
+
+
+Use `\imath` and `\jmath` for unit vectors ...
+\hat \imath, \hat \jmath, \hat k
+
+!bad ... to avoid
+\hat i, \hat j, \hat k
+
+
+Take the cross product with `\times`
+\vec a \times \vec b
+
+Take the dot product with `\cdot`
+\vec a \cdot \vec b
+
+Angle brackets and the nabla operator
+\nabla = \left\langle x,y,z \right\rangle
+
+Curl
+\nabla \times \mathbf F = \operatorname{curl} \mathbf F
+
+Divergence
+\nabla \cdot \mathbf F = \operatorname{div} \mathbf F
+
+# Matrices
+
+Make a matrix with parentheses
+\begin{pmatrix}
+    a & b\\
+    c & d
+\end{pmatrix}
+
+Make a matrix with brackets
+\begin{bmatrix}
+    a & b\\
+    c & d
+\end{bmatrix}
+
+The determinant
+\det A = \begin{vmatrix}
+    a & b\\
+    c & d
+\end{vmatrix}
+
+Add some centered, vertical and diagonal dots
+\begin{bmatrix}
+    1      & 0      & \cdots & 0     \\
+    0      & 1      & \cdots & 0     \\
+    \vdots & \vdots & \ddots & \vdots\\
+    0      & 0      & \cdots & 1     \\
+\end{bmatrix}

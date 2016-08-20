@@ -1,0 +1,301 @@
+body {
+    font-size:20px;
+    background:#fafafa;
+    margin:0;
+    padding:0;
+}
+
+
+    body > header {
+        font-size: 60px;
+        font-family: "Libre Baskerville";
+        color: #333;
+        background:whitesmoke;
+    }
+
+        body > header img {
+            position: relative;
+            top: 10px;
+        }
+
+    section, body > header {
+        width:100%;
+        padding: 50px;
+        padding-left:23rem;
+        box-sizing:border-box;
+    }
+
+    section:nth-child(2n) {
+        background: #ebebeb;
+    }
+
+        h1, h2 {
+            font-size:70px;
+            font-family: 'Libre Baskerville', serif;
+            font-weight:normal;
+            color:#333;
+        }
+
+        h2 {
+            font-size:30px;
+            opacity:0.9
+        }
+
+    p {
+        max-width:600px;
+        margin-bottom:10px;
+        line-height: 1.4;
+        color:#eee;
+    }
+
+    a.bookmarklet {
+        padding: 13px 15px;
+        background: #43a047;
+        color: white;
+        font-family: 'Roboto';
+        border-radius: 4px;
+        text-decoration: none;
+    }
+
+    .examples {
+        display:flex;
+        flex-wrap: wrap;
+    }
+
+        .example {
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            margin:20px;
+            min-width:300px;
+        }
+
+            .example .title {
+                background:#43a047;
+                color: white;
+                font-family: sans-serif;
+                padding: 10px 25px;
+                text-align:center;
+                line-height:1.5;
+            }
+
+                code {
+                    font-family:monospace;
+                    background-color:rgba(66,66,66,0.4);
+                    padding:2px 5px;
+                    border-radius:2px;
+                    color:white;
+                }
+
+
+            .example.bad .title {
+                background: #d32f2f;
+            }
+
+            .example pre {
+                margin:0;
+                font-family:monospace;
+                border: none;
+                background: #2d3041;
+                color: white;
+                padding: 20px;
+                font-size:16px;
+                line-height:1.4;
+                position:relative;
+            }
+
+            pre.first::after {
+                content: 'Edit me!';
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 6px 12px;
+                background: #3F51B5;
+                color: white;
+                opacity:1;
+                visibility:visible;
+                transition: all 0.5s;
+            }
+            
+            pre.first.first-focus::after {
+                opacity:0;
+                visibility:hidden;
+            }
+
+            .example .result {
+                background: white;
+                font-size: 25px;
+                text-align:center;
+                padding:25px;
+                visibility:hidden;
+                opacity:0;
+                transition:1s all;
+                flex-grow:1;
+            }
+
+            body.mathjax-loaded .example .result {
+                visibility: visible;
+                opacity:1;
+            }
+
+
+
+@keyframes slide-in {
+    from{transform: translateX(-100%)}
+    to{transform: translateX(0%)}
+}
+
+#toc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height:100%;
+    background: #2d3041;
+    color:white;
+    padding: 30px 20px;
+    width:11em;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    z-index: 2;
+    transform: translateX(-100%);
+    animation: 1s slide-in forwards;
+    animation-delay: 2s;
+}
+
+
+    #toc header {
+        border-bottom: 1px solid;
+        margin-bottom: 13px;
+    }
+
+    #toc a {
+        display: block;
+        opacity:0.6;
+        transition: 0.3s opacity;
+        color:inherit;
+        text-decoration: none;
+    }
+
+    #toc a::before {
+        content: '›';
+        display:inline-block;
+        transform:translateX(-10px);
+        opacity:0;
+        transition:0.3s all;
+    }
+
+    #toc a:hover {
+        opacity:0.9 !important;
+    }
+
+    #toc a.active {
+        opacity:1 !important;
+    }
+
+    #toc a.active::before {
+        transform:translateX(-5px);
+        opacity:1;
+    }
+
+    #toc a.hidden {
+        opacity:0 !important;
+    }
+
+footer {
+    background: #f1f1f1;
+    padding: 20px;
+    padding-left: 23rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 15px;
+    color: #4d4d4d;
+}
+
+    .love {
+        color: #E53935;
+    }
+
+    footer a {
+        text-decoration: none;
+        color: #960000;
+    }
+
+
+@keyframes bounce {
+    0% { transform:scale(1); }
+    25% { transform:scale(1.05); }
+    50% { transform:scale(1); }
+    75% { transform:scale(1.05); }
+    100% { transform:scale(1); }
+}
+
+.highlight {
+    animation: 1s bounce;
+}
+
+@media (max-width: 1300px) {
+    div#toc {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        animation: none !important;
+        transform: translateX(0px);
+    }
+
+    div#toc header {
+        display:inline-block;
+    }
+
+    body> header, body section, body footer {
+        padding:50px;
+    }
+}
+
+@media (max-width:900px) {
+    html body > header, html body section, html footer {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    body>header, body h1 {
+        font-size: 30px;
+    }
+
+    body header img {
+        height:35px;
+    }
+
+    body h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        font-size: 20px !important;
+    }
+
+    body .examples {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .examples pre {
+        word-break: break-word;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+    }
+    .examples .example {
+        width: 90vw;
+        font-size: 90%;
+    }
+
+    .examples .example .result {
+        font-size: 100%;
+    }
+}

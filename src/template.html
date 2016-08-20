@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>An introduction to beautiful math on Quora</title>
+
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto" rel="stylesheet">
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {
+                    inlineMath: [['[math]','[/math]']],
+                    preview: '∴'
+                },
+                "fast-preview": {
+                    disabled: true
+                },
+                messageStyle: "none"
+            });
+        </script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <link rel="icon" type="image/png" href="./icons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="./icons/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="./manifest.json">
+        <link rel="mask-icon" href="./icons/safari-pinned-tab.svg" color="#b92b27">
+        <link rel="shortcut icon" href="./icons/favicon.ico">
+        <meta name="msapplication-config" content="./icons/browserconfig.xml">
+        <meta name="theme-color" content="#ededed">
+
+    </head>
+    <body>
+        <header>An introduction to beautiful math on <img src="quora.svg" alt="Quora"></header>
+        <div id="toc">
+            <header>Table of Contents</header>
+            <div id="loading">Loading &hellip;</div>
+        </div>
+{{content}}
+<footer>Made with <span class="love">❤</span> by <a href="https://www.quora.com/profile/Gilles-Castel-1">Gilles</a>. Thanks to <a href="https://www.quora.com/profile/Job-Bouwman">Job Bouwman</a></footer>
+        <script src="bundle.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82812547-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
