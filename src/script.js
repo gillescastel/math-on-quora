@@ -22,7 +22,7 @@ smoothScroll.init();
     const result = document.createElement('div');
     result.className = 'result';
     // ex.insertBefore(result, code);
-    ex.appendChild(result)
+    ex.appendChild(result);
 
     result.innerHTML = getResult(code);
 
@@ -57,6 +57,15 @@ function getResult(code) {
 
 
 // make clickable
+var supportsPassive = false;
+try {
+    var opts = Object.defineProperty({}, 'passive', {
+        get: function() {
+            supportsPassive = true;
+        }
+    });
+    window.addEventListener('test', null, opts);
+} catch (e) {}
 
 function makeToC() {
     const toc = document.getElementById('toc');
@@ -86,13 +95,14 @@ function makeToC() {
     document.getElementById('loading').style.display = 'none';
 
     function updateToc() {
-        const scrollTop = document.body.scrollTop + window.innerHeight / 2;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollTopMid = scrollTop + window.innerHeight / 2;
         const br = breaks.find(function(br) {
-            if(br.top < scrollTop) {
+            if (br.top < scrollTopMid) {
                 return true;
             }
         });
-        
+
         if (br && br.header != prevHeader) {
             prevHeader = br.header;
             breaks.forEach(x=>x.ele.classList.remove('active'));
@@ -100,8 +110,11 @@ function makeToC() {
         }
     }
 
-    // TODO check if passive is enabled
-    document.addEventListener('scroll', updateToc, {passive: true});
+    document.addEventListener(
+        'scroll',
+        updateToc,
+        supportsPassive ? { passive: true } : false
+    ); 
     updateToc();
 }
 
