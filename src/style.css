@@ -12,6 +12,14 @@ body {
         color: #333;
         background:whitesmoke;
     }
+    
+        body > header div {
+            font-style: italic;
+            font-size:50%;
+            opacity:0.6;
+            margin-left:20px;
+            margin-top:5px;
+        }
 
         body > header img {
             position: relative;
