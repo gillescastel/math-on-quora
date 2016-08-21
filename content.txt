@@ -208,7 +208,7 @@ Use `\angle` to denote an angle
 \angle A = 90^\circ
 
 `\hat` and `\widehat` are another possibility
-\hat A = \widehat{BAC}
+\hat A = \widehat{BAC} = 90^\circ
 
 For radians, the following works
 \angle A = \frac{\pi}{2} \text{ radians}
@@ -216,16 +216,20 @@ For radians, the following works
 ## Greek letters
 
 Some Greek letters
-\pi, \sigma, \epsilon, \rho, \delta
+\alpha \beta \gamma \delta
 
 Greek uppercase letters 
-\Pi, \Sigma, \text{E}, \text{R}, \Delta
+\Gamma \Delta \Theta \Xi \Lambda
 
-Phi has a few variants
-\phi, \varphi
+Phi and epsilon have variants
+\phi, \varphi \quad \epsilon \varepsilon
 
-Same for epsilon
-\epsilon, \varepsilon
+Likewise for theta, kappa ...
+\theta \vartheta \quad \kappa \varkappa
+
+... pi and rho
+\pi \varpi \quad \rho \varrho
+
 
 ## Other symbols
 
@@ -241,7 +245,7 @@ AB \parallel CD
 Similarity
 \triangle ABC \sim \triangle CEF
 
-Cong
+Congruence
 \triangle ABC \cong \triangle CEF
 
 # Functions
@@ -288,19 +292,24 @@ Typesetting sums is easy
 Products can be typeset in a similar fashion
 \displaystyle \prod_{n=1}^\infty x^n
 
-## Let's talk about &hellip;
+## Continuation dots
 
 !bad Never use `...` to make dots
 1 + 2 - 3 + 4 ...
 
-`\cdots` gives centered dots
-f(x) = x + x^2 + x^3 + \cdots
-
 `\ldots` gives low dots
 1, 2, \ldots, 10
 
+`\cdots` gives centered dots
+f(x) = x + x^2 + x^3 + \cdots
+
 Vertical and diagonal dots are useful in matrices
-\vdots \ddots
+\begin{pmatrix}
+    1 & 1 & \cdots & 1 \\
+    0 & 1 & \cdots & 1 \\
+    0 & 0 & \ddots & \vdots \\
+    0 & 0 & 0      & 1
+\end{pmatrix}
 
 # Infinity
 
@@ -315,10 +324,10 @@ Ordinal infinity
 
 # Logic
 
-Logical or & and
+Logical or, logical and
 a \lor b \land c
 
-Logical not
+Negation
 \bar{c} \equiv \lnot c
 
 True and false
@@ -348,7 +357,7 @@ Use `\mathbb` to get double stroked letters
 
 ## Cup and Cap
 
-Use a cup and a cap to unfiy or intersect
+Unify and intersect
 A \cup B = C \cap D
 
 Element of a set
@@ -446,7 +455,7 @@ Here, `\,` adds a small space
 Use `\iint` instead
 \iint x^2 + y^2 \,dx \, dy
 
-Limits can be added too
+Lower and upper bounds
 \int_a^b x \, dx
 
 Displaystyle makes it breath more
