@@ -159,15 +159,7 @@ body {
                 font-size: 25px;
                 text-align:center;
                 padding:25px;
-                visibility:hidden;
-                opacity:0;
-                transition:1s all;
                 flex-grow:1;
-            }
-
-            body.mathjax-loaded .example .result {
-                visibility: visible;
-                opacity:1;
             }
 
 

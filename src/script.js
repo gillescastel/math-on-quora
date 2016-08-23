@@ -105,9 +105,7 @@ function makeToC() {
     updateToc();
 }
 
-MathJax.Hub.Queue(['Typeset', MathJax.Hub, function() {
-    document.body.classList.add('mathjax-loaded');
-}, makeToC]);
+MathJax.Hub.Queue(['Typeset', MathJax.Hub, makeToC]);
 
 
 // if (location.href.includes('exponent')){
