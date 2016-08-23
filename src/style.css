@@ -49,12 +49,42 @@ body {
             opacity:0.9
         }
 
-    p {
-        max-width:600px;
-        margin-bottom:10px;
-        line-height: 1.4;
-        color:#eee;
+    .figure-set {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
+
+        figure {
+            background: white;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0,0 , 0.1);
+        }
+
+        figcaption {
+            padding: 10px 25px;
+            line-height:1.5;
+            /* color: #333; */
+            background: whitesmoke;
+            font-family: 'Roboto';
+            /* font-weight: 300; */
+            width: 320px;
+            box-sizing: border-box;
+            background:#43a047;
+            color:white;
+        }
+
+        figcaption a {
+            color: white;
+            border-bottom: 1px solid;
+            padding-bottom: 4px;
+            text-decoration: none;
+        }
+
+        figure img {
+            width: 300px;
+            margin: 0px 10px;
+        }
 
     a.bookmarklet {
         padding: 13px 15px;
@@ -83,7 +113,7 @@ body {
             .example .title {
                 background:#43a047;
                 color: white;
-                font-family: sans-serif;
+                font-family: 'Roboto', sans-serif;
                 padding: 10px 25px;
                 text-align:center;
                 line-height:1.5;
@@ -137,15 +167,7 @@ body {
                 font-size: 25px;
                 text-align:center;
                 padding:25px;
-                visibility:hidden;
-                opacity:0;
-                transition:1s all;
                 flex-grow:1;
-            }
-
-            body.mathjax-loaded .example .result {
-                visibility: visible;
-                opacity:1;
             }
 
 
