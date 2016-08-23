@@ -165,7 +165,9 @@ body {
             .example .result {
                 background: white;
                 font-size: 25px;
-                text-align:center;
+                display:flex;
+                justify-content: center;
+                align-items: center;
                 padding:25px;
                 flex-grow:1;
             }
