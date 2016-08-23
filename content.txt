@@ -62,7 +62,7 @@ Floor can be obtained with `\lfloor` and `\rfloor`
 `\|` becomes a double bar
 \left\| \frac{z}{a} \right\|
 
-# Text and spacing
+# Text, Style and spacing
 
 ## text
 
@@ -75,7 +75,7 @@ Area 1
 This can be useful for ordinals
 5^\text{th}
 
-## Sizes
+## Style
 
 From small ...
 \tiny 2
@@ -89,6 +89,14 @@ From small ...
 \LARGE 2
 \huge 2
 \Huge 2
+
+Add some color
+\huge
+\color{green}{\ddot \smile}
+
+HTML colors are valid too
+\huge
+\color{#0f0}{\checkmark}
 
 ## Spacing
 
@@ -106,19 +114,6 @@ From small ...
 \blacksquare \,
 \blacksquare
 
-# Adding some color
-
-Make it green ...
-\huge
-\color{green}{\ddot \smile}
-
-or red
-\huge
-\color{red}{\ddot\frown}
-
-HTML colors are valid too
-\huge
-\color{#0f0}{\checkmark}
 
 # Equalities
 
