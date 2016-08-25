@@ -3,6 +3,7 @@ body {
     background:#fafafa;
     margin:0;
     padding:0;
+    font-family: 'Roboto', sans-serif
 }
 
 
@@ -64,10 +65,7 @@ body {
         figcaption {
             padding: 10px 25px;
             line-height:1.5;
-            /* color: #333; */
             background: whitesmoke;
-            font-family: 'Roboto';
-            /* font-weight: 300; */
             width: 320px;
             box-sizing: border-box;
             background:#43a047;
@@ -90,7 +88,6 @@ body {
         padding: 13px 15px;
         background: #43a047;
         color: white;
-        font-family: 'Roboto';
         border-radius: 4px;
         text-decoration: none;
     }
@@ -113,7 +110,6 @@ body {
             .example .title {
                 background:#43a047;
                 color: white;
-                font-family: 'Roboto', sans-serif;
                 padding: 10px 25px;
                 text-align:center;
                 line-height:1.5;
@@ -188,7 +184,6 @@ body {
     color:white;
     padding: 30px 20px;
     width:11em;
-    font-family: 'Roboto', sans-serif;
     line-height: 1.5;
     z-index: 2;
     transform: translateX(-100%);
@@ -241,7 +236,6 @@ footer {
     padding-left: 23rem;
     box-sizing: border-box;
     text-align: center;
-    font-family: "Roboto";
     font-size: 15px;
     color: #4d4d4d;
 }
