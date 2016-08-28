@@ -506,6 +506,12 @@ Make a matrix with brackets
     c & d
 \end{bmatrix}
 
+The adjugate matrix
+\operatorname{adj} A
+
+Transposing a matrix
+A^\top \text{ or } A^\intercal
+
 The determinant
 \det A = \begin{vmatrix}
     a & b\\
