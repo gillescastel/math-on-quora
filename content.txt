@@ -120,7 +120,7 @@ HTML colors are valid too
 (In)equalities
 1 + 1 = 2 \ne 3 \approx \pi
 
-Tag an equation to reference it later
+Adding a tag will add a number and center your equation
 A = b \cdot h \tag 1
 
 `\lt` stands for less than
