@@ -397,8 +397,8 @@ The real part
 The imaginary part
 \Im \left( e^{ix} \right) = \sin x
 
-The conjugate of number
-\overline z = \Re z - \Im z
+The conjugate of  a number
+\overline z = \Re (z) - i \Im (z)
 
 The magnitude
 |z| = \| z \|
