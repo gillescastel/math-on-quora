@@ -274,6 +274,17 @@ f(x) = \begin{cases}
     x^2 & \text{else}
 \end{cases}
 
+## Operations with functions
+
+Derivative
+f'(x) = \frac{df}{dx}
+
+Composition
+(f \circ g)(x) = f(g(x))
+
+Inverse
+f^{-1}(x)
+
 # Sums and Series
 
 ## Summation and products

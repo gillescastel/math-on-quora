@@ -6,7 +6,7 @@ function titleCase(string) {
 }
 
 function headerCase(string) {
-    return string.split(' ').map(x => ['and', 'of'].includes(x) ? x : titleCase(x)).join(' ');
+    return string.split(' ').map(x => ['and', 'of', 'with'].includes(x) ? x : titleCase(x)).join(' ');
 }
 
 function anchor(string) {
