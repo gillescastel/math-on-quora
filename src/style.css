@@ -14,7 +14,7 @@ body {
         background:whitesmoke;
     }
     
-        body > header div {
+        body > header .subtitle {
             font-style: italic;
             font-size:50%;
             opacity:0.6;
