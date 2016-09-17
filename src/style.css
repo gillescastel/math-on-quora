@@ -238,6 +238,7 @@ footer {
     text-align: center;
     font-size: 15px;
     color: #4d4d4d;
+    line-height: 1.6;
 }
 
     footer > span {
@@ -327,5 +328,9 @@ footer {
 
     .examples .example .result {
         font-size: 100%;
+    }
+
+    footer > span {
+        display: block;
     }
 }
