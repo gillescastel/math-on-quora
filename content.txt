@@ -14,7 +14,7 @@ Multiplication
 !bad Avoid using `*` for multiplication
 2 * 3
 
-Use `\displaystyle` for separate equations.<br>It makes it breath more
+Use `\displaystyle` for separate equations.<br>It makes it breathe more
 \displaystyle \frac{1}{2}
 
 ## Exponents and Indexes
@@ -292,7 +292,7 @@ f^{-1}(x)
 Typesetting sums is easy
 \sum_{n=1}^\infty x^n
 
-`\displaystyle` makes it breath some more
+`\displaystyle` makes it breathe some more
 \displaystyle \sum_{n=1}^\infty x^n
 
 Products can be typeset in a similar fashion
@@ -426,7 +426,7 @@ The argument
 Limits can be typeset with a subscript
 \lim_{x \to \infty} x^2 = \infty
 
-Displaystyle makes it breath more
+Displaystyle makes it breathe more
 \displaystyle\lim_{x \to \infty} x^2 = \infty
 
 ## Derivatives
@@ -464,7 +464,7 @@ Use `\iint` instead
 Lower and upper bounds
 \int_a^b x \, dx
 
-Displaystyle makes it breath more
+Displaystyle makes it breathe more
 \displaystyle\int_a^b x \, dx
 
 Evaluating integrals. `\left.` is an invisible bracket.
