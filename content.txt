@@ -259,7 +259,7 @@ Lots of functions are available ...
 
 ## Introducing functions
 
-Some functions aren't aviable. <br> Use `operatorname`
+Some functions aren't available. <br> Use `operatorname`
 \operatorname{arccosh} x
 
 Another way of defining a function
@@ -342,7 +342,7 @@ True and false
 Implications
 (a \implies b) \iff (b \impliedby a)
 
-Quantors
+Quantifiers
 \forall A, \exists B : A \lt B 
 
 # Sets
