@@ -13,7 +13,7 @@ body {
         color: #333;
         background:whitesmoke;
     }
-    
+
         body > header .subtitle {
             font-style: italic;
             font-size:50%;
@@ -152,10 +152,17 @@ body {
                 visibility:visible;
                 transition: all 0.5s;
             }
-            
+
             pre.first.first-focus::after {
                 opacity:0;
                 visibility:hidden;
+            }
+
+
+            /* triple selectors are needed to override MathJax FullWidth */
+            .mjx-full-width.mjx-full-width.mjx-full-width,
+            .MathJax_FullWidth.MathJax_FullWidth.MathJax_FullWidth {
+                width: 100% !important;
             }
 
             .example .result {
