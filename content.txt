@@ -40,7 +40,7 @@ To take the [math]n^\text{th}[/math] root, use
 \sqrt[3]{27} = 3
 
 `\pm` becomes a plus-minus.
-x^2 = 4 \implies x = \pm \sqrt{4}
+x^2 = 4 \Rightarrow x = \pm \sqrt{4}
 
 Braces can be omitted if the argument is only 1 symbol
 \sqrt 2
@@ -114,6 +114,9 @@ HTML colors are valid too
 \blacksquare \,
 \blacksquare
 
+Small spaces are usefull to group digits
+54\,321
+
 
 # Equalities
 
@@ -132,7 +135,7 @@ x \gt 3
 `\ge` stands for greater than or equal to
 x \ge 3
 
-`\not` can be prepended to anything, but is often ugly
+`\not` can be used to negate anything, but is often ugly
 x \not\gt 4
 
 [math]T[/math] is proportional to [math]p[/math]
@@ -295,6 +298,9 @@ Typesetting sums is easy
 `\displaystyle` makes it breathe some more
 \displaystyle \sum_{n=1}^\infty x^n
 
+`\limits` maintains the small style, but shifts<br>the limits to the bottom of the sum
+\sum\limits_{n=1}^\infty x^n
+
 Products can be typeset in a similar fashion
 \displaystyle \prod_{n=1}^\infty x^n
 
@@ -340,7 +346,7 @@ True and false
 \top \land \bot \equiv \bot
 
 Implications
-(a \implies b) \iff (b \impliedby a)
+(a \Rightarrow b) \Leftrightarrow (b \Leftarrow a)
 
 Quantifiers
 \forall A, \exists B : A \lt B 
@@ -395,7 +401,7 @@ Binomial notation
 {n \choose r} = \binom{n}{r} = \frac{n!}{(n-r)!r!}
 
 Other ways
-{}_nC_r = C_r^n
+{}^n\text{C}_r = {}_n\text{C}_r = \text{C}_r^n
 
 # Complex numbers
 
@@ -467,7 +473,7 @@ Lower and upper bounds
 Displaystyle makes it breathe more
 \displaystyle\int_a^b x \, dx
 
-Evaluating integrals. `\left.` is an invisible bracket.
+Evaluating integrals. `\left.` is an invisible bracket
 \displaystyle
 \int_0^1 x \, dx = \left. \frac{x^2}{2} \right|_0^1
 
@@ -475,10 +481,13 @@ Closed path integral
 \displaystyle
 \oint_C \mathbf F \cdot d \mathbf r
 
+`\limits` places the boundaries under the integral sign
+\displaystyle\oint\limits_C \mathbf F \cdot d \mathbf r
+
 # Vectors
 
 Choose one of the following
-\mathbf{a} = \vec a
+\mathbf{u} = \vec u
 
 
 Use `\imath` and `\jmath` for unit vectors ...
@@ -489,10 +498,10 @@ Use `\imath` and `\jmath` for unit vectors ...
 
 
 Take the cross product with `\times`
-\vec a \times \vec b
+\vec u \times \vec v
 
 Take the dot product with `\cdot`
-\vec a \cdot \vec b
+\vec u \cdot \vec v
 
 Angle brackets and the nabla operator
 \nabla = \left\langle x,y,z \right\rangle
@@ -507,14 +516,14 @@ Divergence
 
 Make a matrix with parentheses
 \begin{pmatrix}
-    a & b\\
-    c & d
+    0 & 1\\
+    1 & 1
 \end{pmatrix}
 
 Make a matrix with brackets
 \begin{bmatrix}
-    a & b\\
-    c & d
+    0 & 1\\
+    1 & 1
 \end{bmatrix}
 
 The adjugate matrix
@@ -525,9 +534,9 @@ A^\top \text{ or } A^\intercal
 
 The determinant
 \det A = \begin{vmatrix}
-    a & b\\
-    c & d
-\end{vmatrix}
+    0 & 1\\
+    1 & 1
+\end{vmatrix} = -1
 
 Add some centered, vertical and diagonal dots
 \begin{bmatrix}
