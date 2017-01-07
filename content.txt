@@ -9,7 +9,7 @@ Division can be done as follows
 1/2 = 1 \div 2 = \frac{1}{2}
 
 Multiplication
-2 \cdot 3 = 2 \times 3 
+2 \cdot 3 = 2 \times 3
 
 !bad Avoid using `*` for multiplication
 2 * 3
@@ -101,8 +101,7 @@ HTML colors are valid too
 ## Spacing
 
 `\&nbsp;` adds a space with the width of a space
-\blacksquare \ 
-\blacksquare
+\blacksquare \ \blacksquare
 
 `\quad` and `\qquad` are bigger spaces
 \blacksquare \quad
@@ -153,14 +152,14 @@ You can also give a tag to a line
 \begin{align}
     2 + 2 &= 4     \tag 1 \\
     2     &= 4 - 2        \\
-    2     &= 2     \tag a 
+    2     &= 2     \tag a
 \end{align}
 
 To give some more explanation, add some text
 \begin{align}
     2 + 2 &= 4                             \tag 1 \\
     2     &= 4 - 2 && \text{subtracting 2}        \\
-    2     &= 2                             \tag a 
+    2     &= 2                             \tag a
 \end{align}
 
 System of equations
@@ -216,7 +215,7 @@ For radians, the following works
 Some Greek letters
 \alpha \beta \gamma \delta
 
-Greek uppercase letters 
+Greek uppercase letters
 \Gamma \Delta \Theta \Xi \Lambda
 
 Phi and epsilon have variants
@@ -349,7 +348,7 @@ Implications
 (a \implies b) \iff (b \impliedby a)
 
 Quantifiers
-\forall A, \exists B : A \lt B 
+\forall A, \exists B : A \lt B
 
 # Sets
 
@@ -387,7 +386,7 @@ To subtract a set, write
 ## Others
 
 Empty set
-\emptyset = \varnothing 
+\emptyset = \varnothing
 
 Powerset
 \mathcal P \{1, 2\} = \{\{\}, \{1\}, \{2\}, \{1,2\} \}
