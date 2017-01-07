@@ -113,7 +113,7 @@ HTML colors are valid too
 \blacksquare \,
 \blacksquare
 
-Small spaces are usefull to group digits
+Small spaces are useful to group digits
 54\,321
 
 
