@@ -12,7 +12,9 @@
 			"type": "image\/png"
 		}
 	],
-	"theme_color": "#ededed",
+	"theme_color": "#b92b27",
+    "homepage_url": "https://math-on-quora.surge.sh",
+    "start_url": "/index.html",
 	"display": "standalone",
 	"orientation": "portrait"
 }
