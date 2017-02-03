@@ -1,4 +1,4 @@
-body {
+html, body {
     font-size:20px;
     background:#fafafa;
     margin:0;
@@ -176,12 +176,6 @@ body {
             }
 
 
-
-@keyframes slide-in {
-    from{transform: translateX(-100%)}
-    to{transform: translateX(0%)}
-}
-
 #toc {
     position: fixed;
     top: 0;
@@ -193,9 +187,6 @@ body {
     width:11em;
     line-height: 1.5;
     z-index: 2;
-    transform: translateX(-100%);
-    animation: 1s slide-in forwards;
-    animation-delay: 2s;
 }
 
 
@@ -279,7 +270,6 @@ footer {
         position: relative;
         width: 100%;
         box-sizing: border-box;
-        animation: none !important;
         transform: translateX(0px);
     }
 
