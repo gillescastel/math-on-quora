@@ -10,10 +10,12 @@ function headerCase(string) {
 }
 
 function anchor(string) {
-    return string.trim().toLowerCase().replace(/\s+/g, '-');
+    return string.trim().toLowerCase().replace(/[\s,]+/g, '-');
 }
 
 const lines = contents.split(/\n\n+/).map(line => line.trim());
+
+let tableOfContents = `<a data-scroll href='#introduction'>Introduction</a>`
 
 let examplesHaveStarted = false;
 let sectionHasStarted = false;
@@ -45,6 +47,7 @@ let parsed = lines.map(function(line, i) {
         suffix += !sectionHasStarted && `<section id='${anchor(text)}'>`;
         sectionHasStarted = true;
 
+        tableOfContents += `<a data-scroll href='#${anchor(text)}'>${headerCase(text)}</a>`
 
         return suffix + `<h1>${headerCase(text)}</h1>`;
     }
@@ -71,7 +74,11 @@ let parsed = lines.map(function(line, i) {
 
     examplesHaveStarted = true;
     return suffix +
-        `<div class="example${className}"><div class="title">${titleCase(title)}</div><pre>${example}</pre></div>`;
+        `<div class="example${className}">
+        <div class=title>${titleCase(title)}</div>
+        <pre content-editable=true spellcheck=false>${example}</pre>
+        <div class=result>[math]${example}[/math]</div>
+    </div>`.split('\n').map(line => line.trim()).join('');
 });
 
 if (examplesHaveStarted) {
@@ -83,6 +90,8 @@ if (sectionHasStarted) {
 }
 
 const template = fs.readFileSync('./src/template.html', 'utf8').split(/\n+/).map(x=>x.trim()).join('');
-const html = template.replace('{{content}}', parsed.join(''));
+const html = template
+    .replace('{{toc}}', tableOfContents)
+    .replace('{{content}}', parsed.join(''));
 
 fs.writeFileSync('./dist/index.html', html);
