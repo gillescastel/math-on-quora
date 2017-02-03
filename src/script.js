@@ -38,6 +38,16 @@ if (window.innerWidth > 760) {
         };
     });
 
+    function debounce(fn, delay) {
+        let timer = null;
+        return function () {
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                fn()
+            }, delay);
+        };
+    }
+
     function sync() {
         items.forEach(function(item) {
             const bounds = item.target.getBoundingClientRect();
@@ -63,7 +73,7 @@ if (window.innerWidth > 760) {
 
     document.addEventListener(
         'scroll',
-        sync,
+        debounce(sync, 40),
         supportsPassive ? { passive: true } : false
     );
 
