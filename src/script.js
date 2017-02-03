@@ -1,5 +1,6 @@
 /* global MathJax, smoothScroll */
 
+
 [...document.querySelectorAll('.example')].forEach(function(ex, i) {
     const code = ex.querySelector('pre');
 
@@ -26,42 +27,46 @@
 
 });
 
+MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
 
-const items = [...document.querySelectorAll('#toc a')].map(function(anchor) {
-    return {
-        anchor,
-        target: document.getElementById(anchor.getAttribute('href').slice(1))
-    };
-});
 
-function sync() {
-    items.forEach(function(item) {
-        const bounds = item.target.getBoundingClientRect();
-        const height = window.innerHeight;
-        if (bounds.top <= height/2 && bounds.bottom >= height/2){
-            item.anchor.classList.add('active');
-        } else {
-            item.anchor.classList.remove('active');
-        }
-    })
+if (window.innerWidth > 760) {
+    const items = [...document.querySelectorAll('#toc a')].map(function(anchor) {
+        return {
+            anchor,
+            target: document.getElementById(anchor.getAttribute('href').slice(1))
+        };
+    });
+
+    function sync() {
+        items.forEach(function(item) {
+            const bounds = item.target.getBoundingClientRect();
+            const height = window.innerHeight;
+            if (bounds.top <= height/2 && bounds.bottom >= height/2){
+                item.anchor.classList.add('active');
+            } else {
+                item.anchor.classList.remove('active');
+            }
+        })
+    }
+
+    let supportsPassive = false;
+    try {
+        var opts = Object.defineProperty({}, 'passive', {
+            get: function() {
+                supportsPassive = true;
+            }
+        });
+        window.addEventListener('test', null, opts);
+    } catch (e) {}
+
+
+    document.addEventListener(
+        'scroll',
+        sync,
+        supportsPassive ? { passive: true } : false
+    );
+
+    smoothScroll.init();
 }
 
-let supportsPassive = false;
-try {
-    var opts = Object.defineProperty({}, 'passive', {
-        get: function() {
-            supportsPassive = true;
-        }
-    });
-    window.addEventListener('test', null, opts);
-} catch (e) {}
-
-document.addEventListener(
-    'scroll',
-    sync,
-    supportsPassive ? { passive: true } : false
-);
-
-
-smoothScroll.init();
-MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
