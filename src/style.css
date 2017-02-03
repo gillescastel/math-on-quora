@@ -183,17 +183,11 @@ html, body {
     height:100%;
     background: #2d3041;
     color:white;
-    padding: 30px 20px;
+    padding: 1.5em;
     width:11em;
     line-height: 1.5;
     z-index: 2;
 }
-
-
-    #toc header {
-        border-bottom: 1px solid;
-        margin-bottom: 13px;
-    }
 
     #toc a {
         display: block;
@@ -226,6 +220,29 @@ html, body {
 
     #toc a.hidden {
         opacity:0 !important;
+    }
+
+    #toc-toggle {
+        user-select: none;
+        position:fixed;
+        left:0;
+        bottom:0;
+        padding:10px 12px;
+        z-index:10;
+        display: none;
+        background: #2d3041;
+        color: white;
+        border-top-right-radius: 2px;
+        cursor: pointer;
+    }
+
+    #toc.active {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        padding-bottom: 3em;
+        height: auto;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)
     }
 
 footer {
@@ -266,15 +283,15 @@ footer {
 }
 
 @media (max-width: 1300px) {
-    div#toc {
+    #toc {
         position: relative;
         width: 100%;
         box-sizing: border-box;
         transform: translateX(0px);
     }
 
-    div#toc header {
-        display:inline-block;
+    #toc-toggle {
+        display: inline-block;
     }
 
     body> header, body section, body footer {
@@ -309,6 +326,7 @@ footer {
     #toc a {
         opacity:0.9;
     }
+
 
     body .examples {
         display: flex;

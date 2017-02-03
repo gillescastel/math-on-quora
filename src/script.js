@@ -29,8 +29,9 @@
 
 MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
 
+const DESKTOP = window.innerWidth > 760;
 
-if (window.innerWidth > 760) {
+if (DESKTOP) {
     const items = [...document.querySelectorAll('#toc a')].map(function(anchor) {
         return {
             anchor,
@@ -80,3 +81,15 @@ if (window.innerWidth > 760) {
     smoothScroll.init();
 }
 
+if (!DESKTOP) {
+    const toc = document.getElementById('toc')
+    document.getElementById('toc-toggle').onclick = function() {
+        toc.classList.toggle('active')
+    }
+
+    document.querySelectorAll('#toc a').forEach(function(a) {
+        a.onclick = function() {
+            toc.classList.remove('active')
+        }
+    })
+}
