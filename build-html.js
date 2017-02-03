@@ -76,7 +76,7 @@ let parsed = lines.map(function(line, i) {
     return suffix +
         `<div class="example${className}">
         <div class=title>${titleCase(title)}</div>
-        <pre content-editable=true spellcheck=false>${example}</pre>
+        <pre contenteditable=true spellcheck=false>${example}</pre>
         <div class=result>[math]${example}[/math]</div>
     </div>`.split('\n').map(line => line.trim()).join('');
 });
