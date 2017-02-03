@@ -1,7 +1,7 @@
 {
   "name": "quora-math-guide",
   "version": "1.0.0",
-  "description": "Shoft MathJax guide for Quora",
+  "description": "Short MathJax guide for Quora",
   "scripts": {
     "build": "npm run build:html && npm run build:js && npm run build:css",
     "build:html": "node ./build-html.js",
