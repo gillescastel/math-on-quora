@@ -74,11 +74,7 @@ let parsed = lines.map(function(line, i) {
 
     examplesHaveStarted = true;
     return suffix +
-        `<div class="example${className}">
-        <div class=title>${titleCase(title)}</div>
-        <pre contenteditable=true spellcheck=false>${example}</pre>
-        <div class=result>[math]${example}[/math]</div>
-    </div>`.split('\n').map(line => line.trim()).join('');
+        `<div class="example${className}"><div class=title>${titleCase(title)}</div><pre contenteditable=true spellcheck=false>${example}</pre><div class=result>[math]${example}[/math]</div></div>`;
 });
 
 if (examplesHaveStarted) {
