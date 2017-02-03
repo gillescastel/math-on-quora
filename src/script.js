@@ -42,16 +42,7 @@ smoothScroll.init();
 });
 
 function getResult(code) {
-    // deprecate multiple?
-    if (code.classList.contains('multiple')) {
-        return code.textContent
-            .split('\n')
-            .map(x => x.replace(/\[\/?math\]/gi, ''))
-            .map(x => `[math]${x}[/math]`)
-            .join('<br>');
-    } else {
-        return `[math]${code.textContent}[/math]`;
-    }
+    return `[math]${code.textContent}[/math]`;
 }
 
 
@@ -82,13 +73,13 @@ function makeToC() {
         link.href = `#${id}`;
 
         toc.appendChild(link);
-        
-        setTimeout(()=> link.classList.remove('hidden'), 100*i);
+
+        setTimeout(() => link.classList.remove('hidden'), 100 * i);
 
         return {
             top: sec.offsetTop,
             header: header,
-            ele: link 
+            ele: link
         };
     }).reverse();
 
@@ -105,7 +96,7 @@ function makeToC() {
 
         if (br && br.header != prevHeader) {
             prevHeader = br.header;
-            breaks.forEach(x=>x.ele.classList.remove('active'));
+            breaks.forEach(x => x.ele.classList.remove('active'));
             br.ele.classList.add('active');
         }
     }
@@ -114,16 +105,8 @@ function makeToC() {
         'scroll',
         updateToc,
         supportsPassive ? { passive: true } : false
-    ); 
+    );
     updateToc();
 }
 
 MathJax.Hub.Queue(['Typeset', MathJax.Hub, makeToC]);
-
-
-// if (location.href.includes('exponent')){
-//     setTimeout(function() {
-//         document.getElementById('exponent').scrollIntoView();
-//         document.getElementById('exponent').classList.add('highlight');
-//     }, 3000);
-// }
