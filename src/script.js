@@ -75,6 +75,8 @@ document.addEventListener(
     supportsPassive ? { passive: true } : false
 );
 
+sync()
+
 
 if (window.innerWidth > 900) {
     smoothScroll.init();
@@ -90,3 +92,4 @@ document.querySelectorAll('#toc a').forEach(function(a) {
         toc.classList.remove('active')
     }
 })
+
