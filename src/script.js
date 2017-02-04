@@ -1,6 +1,5 @@
 /* global MathJax, smoothScroll */
 
-
 [...document.querySelectorAll('.example')].forEach(function(ex, i) {
     const code = ex.querySelector('pre');
 
@@ -24,7 +23,6 @@
         result.innerHTML = `[math]${this.textContent}[/math]`;
         MathJax.Hub.Queue(['Typeset', MathJax.Hub, result]);
     };
-
 });
 
 MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
@@ -38,11 +36,14 @@ const items = [...document.querySelectorAll('#toc a')].map(function(anchor) {
 
 function debounce(fn, delay) {
     let timer = null;
-    return function () {
+    return function() {
         clearTimeout(timer);
-        timer = setTimeout(function () {
-            fn()
-        }, delay);
+        timer = setTimeout(
+            function() {
+                fn();
+            },
+            delay
+        );
     };
 }
 
@@ -50,12 +51,12 @@ function sync() {
     items.forEach(function(item) {
         const bounds = item.target.getBoundingClientRect();
         const height = window.innerHeight;
-        if (bounds.top <= height/2 && bounds.bottom >= height/2){
+        if (bounds.top <= height / 2 && bounds.bottom >= height / 2) {
             item.anchor.classList.add('active');
         } else {
             item.anchor.classList.remove('active');
         }
-    })
+    });
 }
 
 let supportsPassive = false;
@@ -66,30 +67,28 @@ try {
         }
     });
     window.addEventListener('test', null, opts);
-} catch (e) {}
-
+} catch (e) {
+}
 
 document.addEventListener(
     'scroll',
     debounce(sync, 40),
-    supportsPassive ? { passive: true } : false
+    supportsPassive ? {passive: true} : false
 );
 
-sync()
-
+sync();
 
 if (window.innerWidth > 900) {
     smoothScroll.init();
 }
 
-const toc = document.getElementById('toc')
+const toc = document.getElementById('toc');
 document.getElementById('toc-toggle').onclick = function() {
-    toc.classList.toggle('active')
-}
+    toc.classList.toggle('active');
+};
 
 document.querySelectorAll('#toc a').forEach(function(a) {
     a.onclick = function() {
-        toc.classList.remove('active')
-    }
-})
-
+        toc.classList.remove('active');
+    };
+});
