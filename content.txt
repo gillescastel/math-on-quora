@@ -125,7 +125,7 @@ Small spaces are useful to group digits
 Adding a tag will add a number and center your equation
 A = b \cdot h \tag 1
 
-Using `tag*` will remove the parenthesis
+Using `tag*` will remove the parentheses
 A = b \cdot h \tag* 2
 
 To center the equation without a number, this works:
