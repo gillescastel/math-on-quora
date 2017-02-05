@@ -128,7 +128,7 @@ A = b \cdot h \tag 1
 Using `tag*` will remove the parentheses
 A = b \cdot h \tag* 2
 
-To center the equation without a number, this works:
+To center an equation without a tag,<br>the following works
 A = b \cdot h \tag*{}
 
 `\lt` stands for less than
