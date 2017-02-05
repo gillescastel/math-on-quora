@@ -219,13 +219,13 @@ Greek uppercase letters
 \Gamma \Delta \Theta \Xi \Lambda
 
 Phi and epsilon have variants
-\phi, \varphi \quad \epsilon \varepsilon
+\phi, \varphi \quad \epsilon, \varepsilon
 
 Likewise for theta, kappa ...
-\theta \vartheta \quad \kappa \varkappa
+\theta, \vartheta \quad \kappa, \varkappa
 
 ... pi and rho
-\pi \varpi \quad \rho \varrho
+\pi, \varpi \quad \rho, \varrho
 
 
 ## Other symbols
