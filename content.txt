@@ -48,10 +48,10 @@ Braces can be omitted if the argument is only 1 symbol
 ## Delimiters
 
 For large parentheses, use `\left` and `\right` ...
-\left( \frac{e^{x^2}}{2} \right)
+\displaystyle \left( \frac{1}{x} \right)
 
 !bad ... to avoid the following
-(\frac{e^{x^2}}{2})
+\displaystyle (\frac{1}{x})
 
 This can also be used with `|`, `[`, ...
 \left| \frac{x + 1}{x - 1} \right|
