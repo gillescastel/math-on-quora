@@ -272,7 +272,7 @@ Some functions aren't available. <br> Use `operatorname`
 
 Another way of defining a function
 \begin{align}
-    f\colon \mathbb N &\to \mathbb N\\
+    f\colon \mathbb R &\to \mathbb R^+\\
     x                 &\mapsto x^2
 \end{align}
 
