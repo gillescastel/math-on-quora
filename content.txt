@@ -508,13 +508,16 @@ Take the cross product with `\times`
 Take the dot product with `\cdot`
 \vec u \cdot \vec v
 
-Angle brackets and the nabla operator
-\nabla = \left\langle x,y,z \right\rangle
+Angle brackets can be used
+\vec u = \left< u_x, u_y, u_z \right>
 
-Curl
+The nabla operator
+\nabla f = \operatorname{grad} f
+
+Curl of a vector field
 \nabla \times \mathbf F = \operatorname{curl} \mathbf F
 
-Divergence
+Divergence of a vector field
 \nabla \cdot \mathbf F = \operatorname{div} \mathbf F
 
 # Matrices
