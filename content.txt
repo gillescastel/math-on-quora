@@ -93,6 +93,15 @@ From small ...
 \huge 2
 \Huge 2
 
+Some styles
+\mathrm{ABC}
+\mathit{abc}
+\mathcal{ABC}
+\mathscr{ABC}
+\mathbb{abc}
+\mathbb{ABC}
+\mathfrak{ABC}
+
 Add some color
 \huge
 \color{green}{\ddot \smile}
