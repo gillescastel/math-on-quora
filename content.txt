@@ -342,6 +342,9 @@ Cardinal infinity
 Ordinal infinity
 \omega^\omega = \text{big}
 
+Complex infinity
+\tilde\infty
+
 # Logic
 
 Logical or, logical and
