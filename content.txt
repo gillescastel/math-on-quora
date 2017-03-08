@@ -520,11 +520,21 @@ Angle brackets can be used
 The nabla operator
 \nabla f = \operatorname{grad} f
 
-Curl of a vector field
-\nabla \times \mathbf F = \operatorname{curl} \mathbf F
-
 Divergence of a vector field
-\nabla \cdot \mathbf F = \operatorname{div} \mathbf F
+\nabla \cdot \mathbf F
+ = \operatorname{div} \mathbf F
+
+For repeated use, add this once ...
+\DeclareMathOperator{\div}{div}
+\div \mathbf F
+
+... and use it as many times as you want.
+\div \mathbf A = \div \mathbf B
+
+Curl of a vector field
+\nabla \times \mathbf F
+ = \operatorname{curl} \mathbf F
+
 
 # Matrices
 
