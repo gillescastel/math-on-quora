@@ -65,6 +65,12 @@ Floor can be obtained with `\lfloor` and `\rfloor`
 `\|` becomes a double bar
 \left\| \frac{z}{a} \right\|
 
+Angle brackets can be typeset as follows
+\langle x^2 + 1 \rangle
+
+To make them automatically grow, use
+\left< x^2 + 1 \right>
+
 # Text, Style and spacing
 
 ## text
