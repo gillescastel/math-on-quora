@@ -458,8 +458,11 @@ Displaystyle makes it breathe more
 
 ## Derivatives
 
-Derivatives
+Typeset derivatives using fractions
 \dfrac{dy}{dx}
+
+If you want [math]\mathrm d[/math] to be upright, use
+\dfrac{\mathrm dy}{\mathrm dx}
 
 Derivative at a point
 \left. \dfrac{dy}{dx} \right|_{x=0}
