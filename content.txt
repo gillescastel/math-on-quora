@@ -481,6 +481,9 @@ Derivates w.r.t. time
 Here, `\,` adds a small space
 \int x \, dx = \frac{x^2}{2}
 
+For an upright [math]\mathrm d[/math], use
+\int x \, \mathrm dx = \frac{x^2}{2}
+
 !bad Never use consecutive `\int`s
 \int \int x^2 + y^2 \,dx \,dy
 
