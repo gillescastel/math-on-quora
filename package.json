@@ -14,14 +14,16 @@
   "author": "Gilles Castel",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^6.4.0",
-    "babel-cli": "^6.11.4",
+    "autoprefixer": "^6.7.7",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.13.2",
-    "babel-preset-es2015-script": "^1.0.0",
-    "cssnano": "^3.7.4",
+    "babel-preset-es2015-script": "^1.1.0",
+    "cssnano": "^3.10.0",
     "eslint": "^3.14.1",
     "nodemon": "^1.10.0",
-    "postcss-cli": "^2.5.2",
-    "uglify-js": "^2.7.3"
+    "postcss": "^6.0.10",
+    "postcss-cli": "^2.6.0",
+    "uglify-js": "^2.7.3",
+    "uglifyjs": "^2.4.11"
   }
 }
