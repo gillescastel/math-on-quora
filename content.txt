@@ -75,7 +75,7 @@ Angle brackets can be typeset as follows
 To make them automatically grow, use
 \left< \dfrac{1}{2} \right>
 
-# Text, Style and spacing
+# Text and spacing
 
 ## text
 
