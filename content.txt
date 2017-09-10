@@ -88,29 +88,6 @@ Area 1
 This can be useful for ordinals
 5^\text{th}
 
-## Style
-
-From small ...
-\tiny 2
-\scriptsize 2
-\small 2
-\normalsize 2
-\large 2
-
-... to big
-\Large 2
-\LARGE 2
-\huge 2
-\Huge 2
-
-Add some color
-\huge
-\color{green}{\ddot \smile}
-
-HTML colors are valid too
-\huge
-\color{#0f0}{\checkmark}
-
 ## Spacing
 
 `\&nbsp;` adds a space with the width of a space
