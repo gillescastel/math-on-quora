@@ -453,6 +453,14 @@ Difference quotients
 Derivates w.r.t. time
 \dot x, \ddot x
 
+You can add this once ...
+\newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
+\deriv{f}{x}
+
+... to shorten repeated use
+\deriv{y}{x}
+
+
 ## Integrals
 
 Here, `\,` adds a small space
