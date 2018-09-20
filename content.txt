@@ -366,7 +366,7 @@ Use `\mathbb` to get double stroked letters
 \mathbb{N} = \{0, 1, 2, 3, \ldots \}
 
 You can also use the following shorthands
-\C, \N, \O, \Q, \R, \Z
+\O, \N, \Z, \Q, \R, \C
 
 `\mid` inserts a vertical bar
 \{n^2 \mid n \in \N\}
