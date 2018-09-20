@@ -1,4 +1,4 @@
-/* global MathJax, smoothScroll */
+/* global MathJax */
 
 [...document.querySelectorAll('.example')].forEach(function(ex, i) {
     const code = ex.querySelector('pre');
@@ -73,10 +73,6 @@ document.addEventListener(
 );
 
 sync();
-
-if (window.innerWidth > 900) {
-    smoothScroll.init();
-}
 
 const toc = document.getElementById('toc');
 document.getElementById('toc-toggle').onclick = function() {
