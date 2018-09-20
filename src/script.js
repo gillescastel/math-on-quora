@@ -15,7 +15,7 @@
     // remove tags from pasted content
     code.addEventListener('paste', function(e) {
         e.preventDefault();
-        var text = e.clipboardData.getData('text/plain');
+        const text = e.clipboardData.getData('text/plain');
         document.execCommand('insertHTML', false, text);
     });
 
@@ -38,12 +38,9 @@ function debounce(fn, delay) {
     let timer = null;
     return function() {
         clearTimeout(timer);
-        timer = setTimeout(
-            function() {
-                fn();
-            },
-            delay
-        );
+        timer = setTimeout(function() {
+            fn();
+        }, delay);
     };
 }
 
@@ -67,8 +64,7 @@ try {
         }
     });
     window.addEventListener('test', null, opts);
-} catch (e) {
-}
+} catch (e) {}
 
 document.addEventListener(
     'scroll',
