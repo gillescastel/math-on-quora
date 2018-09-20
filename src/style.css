@@ -272,6 +272,7 @@ footer {
     footer a {
         text-decoration: none;
         color: #960000;
+        white-space: nowrap;
     }
 
 
