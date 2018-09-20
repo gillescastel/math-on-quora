@@ -262,8 +262,8 @@ Some functions aren't available. <br> Use `operatorname`
 
 Another way of defining a function
 \begin{align}
-    f\colon \mathbb R &\to \mathbb R^+\\
-    x                 &\mapsto x^2
+    f\colon \R &\to \R^+\\
+    x          &\mapsto x^2
 \end{align}
 
 Piecewise functions
@@ -324,13 +324,16 @@ The inf(ini)ty symbol
 \infty
 
 Cardinal infinity
-|\mathbb N| = \aleph_0
+|\N| = \aleph_0,
+|\R| = \mathfrak c
 
 Ordinal infinity
 \omega^\omega = \text{big}
 
 Complex infinity
 \tilde\infty
+
+
 
 # Logic
 
@@ -362,8 +365,11 @@ Escape them with a backslash
 Use `\mathbb` to get double stroked letters
 \mathbb{N} = \{0, 1, 2, 3, \ldots \}
 
+You can also use the following shorthands
+\C, \N, \O, \Q, \R, \Z
+
 `\mid` inserts a vertical bar
-\{n^2 \mid n \in \mathbb{N}\}
+\{n^2 \mid n \in \N\}
 
 ## Cup and Cap
 
@@ -380,7 +386,7 @@ Add `eq` to get
 A \subseteq B
 
 To subtract a set, write
-\mathbb N_0 = \mathbb N \setminus \{0\}
+\N_0 = \N \setminus \{0\}
 
 ## Others
 
@@ -404,7 +410,7 @@ Other ways
 # Complex numbers
 
 The complex set
-a + ib \in \mathbb C
+a + ib \in \C
 
 The real part
 \Re \left( e^{ix} \right) = \cos x
