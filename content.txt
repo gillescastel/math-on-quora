@@ -22,7 +22,7 @@ Multiplication
 
 
 Repeated decimals can be denoted by a bar
-\frac{1}{3} = 0.\bar 3
+\frac{1}{7} = 0.\overline{142857}
 
 ## Exponents and Indexes
 
