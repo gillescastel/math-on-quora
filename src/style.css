@@ -1,5 +1,5 @@
 html, body {
-    font-size:20px;
+    font-size:18px;
     background:#fafafa;
     margin:0;
     padding:0;
@@ -29,7 +29,7 @@ html, body {
 
     section, body > header {
         width:100%;
-        padding: 50px;
+        padding: 50px 30px;
         padding-left:23rem;
         box-sizing:border-box;
     }
