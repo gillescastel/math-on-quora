@@ -160,10 +160,10 @@ To give some more explanation, add some text
 
 System of equations
 S = \left\{
-\begin{align}
+\begin{aligned}
     a + b     &= 4\\
     a \cdot b &= 4
-    \end{align}
+\end{aligned}
 \right.
 
 ## Annotating equalities
