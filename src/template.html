@@ -103,7 +103,27 @@
                     inlineMath: [['[math]','[/math]']]
                 },
                 messageStyle: "none",
-                showMathMenu: false
+                showMathMenu: false,
+                TeX: {
+                    Macros: {
+                        C: '{\\mathbb{C}}',
+                        N: '{\\mathbb{N}}',
+                        O: '{\\emptyset}',
+                        Q: '{\\mathbb{Q}}',
+                        R: '{\\mathbb{R}}',
+                        Z: '{\\mathbb{Z}}'
+                    }
+                },
+                Safe: {
+                    allow: {
+                        URLs: 'none',
+                        classes: 'none',
+                        cssIDs: 'none',
+                        styles: 'none',
+                        fontsize: 'none',
+                        require: 'none'
+                    }
+                }
             });
         </script>
         <script src="bundle.js"></script>
