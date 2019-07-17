@@ -24,6 +24,8 @@
     "postcss": "^6.0.23",
     "postcss-cli": "^2.6.0",
     "uglify-js": "^2.8.29",
-    "uglifyjs": "^2.4.11"
+    "uglifyjs": "^2.4.11",
+    "braces": "^2.3.1",
+    "event-stream": "^4.0.0"
   }
 }
